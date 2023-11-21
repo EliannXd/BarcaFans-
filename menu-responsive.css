@@ -1,0 +1,310 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 5%;
+    height: 100px;
+    background-color: rgb(10, 80, 80);
+}
+
+nav .logo{
+    float: left;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+nav .list{
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .list li{
+    list-style: none;
+}
+
+nav .list a{
+display: block;
+text-transform: uppercase;
+padding: 15px 25px;
+font-size: 16px;
+font-weight: bold;
+color: #ffffffff;
+text-decoration: none;
+border-radius: 25px;
+}
+
+nav .list a:hover{
+    background-color: aquamarine;
+}
+
+#toogle{
+    position: absolute;
+    top: -100px;
+}
+
+nav .icon-bars{
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav .icon-bars .line{
+    width: 30px;
+    height: 5px;
+    background-color: bisque;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+}
+
+section{
+    height: 90vh; 
+    padding: 75px;
+}
+
+#Inicio{
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.parrafo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Nosotros{
+    background-color: rgb(238, 183, 110);
+}
+
+.trofeos-titulo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: static;
+    bottom: 100px;
+    font-size: 50px;
+    color: rgb(165, 77, 42);
+}
+
+.contenedor{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.box1, .box2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    background-color: rgb(233, 170, 89);
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+    padding: 10px;
+    box-shadow: 10px 10px 10px ;
+}
+
+.p-t{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    font-size: 25px;
+}
+
+
+#Blog{
+    background-color: rgb(230, 175, 104);
+    height: 175vh;
+    width:80vw ;
+    margin: 0 auto;
+    padding: 128px;
+}
+
+
+.inicios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:50px;
+    color: rgb(78, 66, 38);
+    text-shadow: 10px 10px 10px;
+}
+.p-inicios{
+    font-size: 20px;
+}
+.h3-inicios{
+    color: rgb(143, 82, 33);
+    font-size: 30px;
+    text-shadow: 5px 5px 5px
+}
+
+#Redes{
+    background-color: rgb(235, 171, 88);
+    height: auto;
+}
+.h3-redes{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+html{
+    scroll-behavior: smooth;
+}
+.classmenu{
+    display: flex;
+}
+.contenedor-redes{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cajas{
+    width: 300px;
+    height: 100px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+i{
+    font-size: 80px;
+    color: black;
+}
+.barcaimg{
+    height: 80px;
+    width: 80px;
+}
+
+
+@media (max-width: 768px){
+
+
+    nav .logo{
+        float: none;
+        width: auto;
+        justify-content: center;
+    }
+
+    nav .list{
+        float: none;
+        position: fixed;
+        z-index: 9;
+        left: 0;
+        right: 0;
+        top: 100px;
+        bottom: 100%;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: rgb(65, 147, 223);
+        overflow: hidden;
+        transition: all .5s ease-in-out;
+    }
+
+    nav .ist a{
+        font-size: 20px;
+    }
+
+    nav :checked ~ .list{
+        bottom: 0;
+    }
+
+    nav .icon-bars{
+        display: block;
+    }
+
+    #Inicio{
+        background-color: burlywood;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+    }
+    .trofeos-titulo{
+        font-size: 40px;
+    }
+    .parrafo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contenedor{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .box1, .box2{
+        display: flex;
+        background-color: rgb(233, 170, 89);
+        width: 120px;
+        height: 240px;
+        overflow: hidden;
+        padding: 10px;
+        box-shadow: 5px 5px 5px ;
+        font-size: 12px;
+    }
+    .p-t{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        font-size: 18px;
+        color: rgb(95, 62, 19);
+        text-shadow: 3px 3px 3px;
+    }
+
+    #Blog{
+        background-color: rgb(230, 175, 104);
+        height: 160vh;
+        width: auto ;
+        margin: 0 auto;
+        padding: 60px;
+    }
+
+    .inicios{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size:35px;
+        color: rgb(78, 66, 38);
+        text-shadow: 5px 5px 5px;
+    }
+    
+    .p-inicios{
+        font-size: 13px;
+    }
+    
+    .h3-inicios{
+        color: rgb(90, 53, 23);
+        font-size:18px;
+        text-shadow: 2px 2px 2px
+    }
+}
